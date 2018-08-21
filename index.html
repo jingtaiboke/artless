@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>主页</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script type="text/javascript">
+        //控制本页面不会在iframe中出现;
+        if (window != top) {
+            top.location.href = location.href;
+        }
+        //强制修正 以 /index.html 方式访问时路径混乱的问题
+        console.log(location);
+        if(location.pathname.endsWith("index.html")){
+            //不允许路径中夹杂 /index.html
+            location.href = location.protocol+"//"+location.host+(location.pathname.replace(/index\.html/i,""))+location.hash;
+        }
+    </script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/marked.js" type="text/javascript"></script>
+    <script src="js/store.js" type="text/javascript"></script>
+    <script src="js/ditto.js" type="text/javascript"></script>
+    <script src="js/prism.js" type="text/javascript"></script>
+</head>
+<body>
+<!-- essential -->
+<div id="sidebar"></div>
+<div id="content" class="clearfix"></div>
+<!-- optional -->
+<div id="back_to_top">back to top</div>
+<div id="edit">edit</div>
+<div id="loading">Loading ...</div>
+<div id="error">Oops! ... File not found!</div>
+<div id="flip">
+    <div id="pageup">上一章</div>
+    <div id="pagedown">下一章</div>
+</div>
+<div class="progress-indicator-2"></div>
+
+<script src="config.js"></script>
+<noscript>
+    主页显示的文本 index.html
+</noscript>
+</body>
+</html>
