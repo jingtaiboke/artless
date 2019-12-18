@@ -9,7 +9,7 @@ var CONFIG = {
   sidebar_file: "sidebar.md",
 
   // where the docs are actually stored on github - so you can edit
-  base_url: "http://192.168.8.199:8007",
+  base_url: "https://github.com/wxlzmt/artless/edit/master",
 };
 
 // **************************
